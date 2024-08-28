@@ -1,0 +1,46 @@
+% Function to plot results
+function plot_results(detection_times, accuracies, coverage_efficiencies, response_times, scalability_data)
+    figure;
+    subplot(2,2,1);
+    plot(detection_times, accuracies, '-o');
+    title('Detection Times vs Accuracies');
+    xlabel('Detection Times');
+    ylabel('Accuracies');
+
+    subplot(2,2,2);
+    plot(detection_times, coverage_efficiencies, '-o');
+    title('Detection Times vs Coverage Efficiencies');
+    xlabel('Detection Times');
+    ylabel('Coverage Efficiencies');
+
+    subplot(2,2,3);
+    plot(detection_times, response_times, '-o');
+    title('Detection Times vs Response Times');
+    xlabel('Detection Times');
+    ylabel('Response Times');
+
+    subplot(2,2,4);
+    plot(scalability_data.num_uavs, scalability_data.avg_detection_times, '-o');
+    hold on;
+    plot(scalability_data.num_uavs, scalability_data.avg_response_times, '-o');
+    title('Scalability Data');
+    xlabel('Number of UAVs');
+    ylabel('Times');
+    legend('Avg Detection Times', 'Avg Response Times');
+    hold off;
+end
+
+% Generate 100 data points
+num_data_points = 100;
+detection_times = randi([1, 10], 1, num_data_points);
+accuracies = randi([80, 100], 1, num_data_points);
+coverage_efficiencies = randi([70, 100], 1, num_data_points);
+response_times = randi([1, 5], 1, num_data_points) + rand(1, num_data_points);
+
+% Scalability data
+scalability_data.num_uavs = linspace(5, 50, num_data_points);
+scalability_data.avg_detection_times = randi([1, 10], 1, num_data_points);
+scalability_data.avg_response_times = randi([1, 5], 1, num_data_points) + rand(1, num_data_points);
+
+% Plot the results
+plot_results(detection_times, accuracies, coverage_efficiencies, response_times, scalability_data);

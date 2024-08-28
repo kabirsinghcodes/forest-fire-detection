@@ -1,0 +1,14 @@
+Explanation
+Detection Times: Random integers between 1 and 10.
+Accuracies: Random integers between 80 and 100.
+Coverage Efficiencies: Random integers between 70 and 100.
+Response Times: Random values between 1 and 5, with some added randomness.
+Scalability Data:
+Number of UAVs: Linearly spaced values between 5 and 50.
+Average Detection Times: Random integers between 1 and 10.
+Average Response Times: Random values between 1 and 5, with some added randomness.
+Running the Project
+Open MATLAB.
+Create a new script and paste the above code into the script.
+Run the script by clicking the "Run" button in MATLAB.
+This will generate plots for the provided dataset, showing the relationships between detection times, accuracies, coverage efficiencies, response times, and scalability data with 100 data points. This larger dataset will be more suitable for research purposes.

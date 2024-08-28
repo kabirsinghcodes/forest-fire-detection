@@ -1,0 +1,48 @@
+# Webots world file (forest_simulation.wbt)
+WorldInfo {
+  basicTimeStep 32
+}
+
+Viewpoint {
+  orientation -0.5 0.5 0.5 1.0
+  position 0 10 10
+}
+
+# Define UAVs
+DEF UAV1 Drone {
+  translation 0 1 0
+  rotation 0 1 0 0
+}
+
+DEF UAV2 Drone {
+  translation 2 1 0
+  rotation 0 1 0 0
+}
+
+DEF UAV3 Drone {
+  translation 4 1 0
+  rotation 0 1 0 0
+}
+
+DEF UAV4 Drone {
+  translation 6 1 0
+  rotation 0 1 0 0
+}
+
+DEF UAV5 Drone {
+  translation 8 1 0
+  rotation 0 1 0 0
+}
+
+# Add more UAVs as needed
+
+# Define forest environment
+DEF TREE1 Tree {
+  translation 1 0 1
+}
+
+DEF TREE2 Tree {
+  translation 3 0 3
+}
+
+# Add more trees and environmental elements as needed
